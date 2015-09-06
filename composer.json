@@ -17,5 +17,11 @@
         "psr-4": {
             "kma\\": ""
         }
-    }
+    },
+    "repositories":[
+	    {
+	        "type": "git",
+	        "url": "https://path.to/your/repo"
+	    }
+	]
 }
