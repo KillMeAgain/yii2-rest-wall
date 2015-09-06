@@ -18,6 +18,7 @@ use yii\web\User;
  * 'as access' => [
  *     'class' => 'mdm\admin\classes\AccessControl',
  *     'allowActions' => ['site/login', 'site/error']
+ *     or 'denyActions' => ['site/login', 'site/error']
  * ]
  * ~~~
  *
@@ -123,7 +124,6 @@ class AccessControl extends ActionFilter
         	foreach ($this->denyActions as $route) {
         		if (substr($route, -1) === '*') {
         			$route = rtrim($route, "*");
-        			//var_dump(strpos($id, $route));
         			if ($route === '' || strpos($id, $route) === 0) {
         				return true;
         			}
